@@ -4,54 +4,82 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-zinc-900 text-white relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+    <section id="about" className="py-24 md:py-32 bg-white dark:bg-black text-gray-900 dark:text-white">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
+        {/* Minimal header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          className="mb-16 md:mb-24"
         >
-          <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            About Me
+          <span className="text-xs uppercase tracking-[0.2em] text-gray-500">About</span>
+          <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
+            Building the future
+            <br />
+            <span className="text-gray-500">with code & curiosity</span>
           </h2>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
-              <p>
-                Hi, I'm <span className="text-white font-semibold">Faishal Zaka Naufal</span>.
-              </p>
-              <p>
-                I am a Computer Science Master's graduate with over <span className="text-blue-400">6 years</span> of software development experience, 
-                specializing in Python and Java.
-              </p>
-              <p>
-                My journey has taken me through the dynamic fintech industry, where I've focused on 
-                building credit scoring models, automating complex business processes, and leveraging 
-                <span className="text-purple-400"> Generative AI</span> to solve real-world problems.
-              </p>
-              <p>
-                I also have a background in Astronomy, which fuels my curiosity and analytical approach to engineering challenges.
-              </p>
-            </div>
-            
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative p-8 bg-black ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6">
-                <div className="space-y-4">
-                  <p className="text-slate-300">
-                    "I am committed to creating dynamic, scalable, and user-centric web applications using modern technologies."
-                  </p>
-                  <div className="h-px bg-gray-800 my-4" />
-                  <div className="flex justify-between text-sm text-gray-500">
-                    <span>Location: Jakarta, Indonesia</span>
-                    <span>Experience: 6+ Years</span>
-                  </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20">
+          {/* Left - Description */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+              I'm <strong>Faishal Zaka Naufal</strong>, a Computer Science Master's graduate with over 6 years of experience in software development.
+            </p>
+            <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              My journey through fintech has made me an expert in <span className="text-gray-900 dark:text-white font-medium">Python</span> and <span className="text-gray-900 dark:text-white font-medium">Java</span>, specializing in credit scoring models and business process automation.
+            </p>
+            <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              With a unique background in <span className="text-gray-900 dark:text-white font-medium">Astronomy</span>, I bring analytical thinking and curiosity to every challenge.
+            </p>
+          </motion.div>
+
+          {/* Right - Stats & Info */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-8"
+          >
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8">
+              {[
+                { number: "6+", label: "Years" },
+                { number: "3+", label: "Companies" },
+                { number: "10+", label: "Projects" },
+              ].map((stat, i) => (
+                <div key={i} className="border-l-2 border-gray-200 dark:border-gray-800 pl-4">
+                  <span className="text-3xl md:text-4xl font-bold">{stat.number}</span>
+                  <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
                 </div>
+              ))}
+            </div>
+
+            {/* Info cards */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <span className="w-2 h-2 rounded-full bg-gray-900 dark:bg-white" />
+                <span className="text-gray-600 dark:text-gray-400">Fullstack Engineer based in Jakarta</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="w-2 h-2 rounded-full bg-gray-900 dark:bg-white" />
+                <span className="text-gray-600 dark:text-gray-400">Generative AI Specialist</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="w-2 h-2 rounded-full bg-gray-900 dark:bg-white" />
+                <span className="text-gray-600 dark:text-gray-400">Fintech Industry Expert</span>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

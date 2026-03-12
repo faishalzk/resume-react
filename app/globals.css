@@ -4,16 +4,19 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 10, 10, 10;
-    --background-end-rgb: 10, 10, 10;
-  }
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+/* Default to dark to prevent blank page on first load */
+html {
+  background-color: #000;
 }
 
 body {
@@ -21,6 +24,28 @@ body {
   background: rgb(var(--background-start-rgb));
   min-height: 100vh;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Force dark background initially to prevent flash */
+html body {
+  background-color: #000;
+}
+
+html.dark body {
+  background-color: #000;
+  color: #fff;
+}
+
+html:not(.dark) body {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) {
+  .custom-cursor {
+    display: none;
+  }
 }
 
 @layer utilities {
@@ -51,4 +76,14 @@ body {
 ::selection {
   background: rgba(59, 130, 246, 0.3);
   color: #fff;
+}
+
+.dark ::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #fff;
+}
+
+html:not(.dark) ::selection {
+  background: rgba(59, 130, 246, 0.5);
+  color: #000;
 }
