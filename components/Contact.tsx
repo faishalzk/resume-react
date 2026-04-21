@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github } from "lucide-react";
 
-// Star component for astronomy feel
+// Twinkling stars background
 function Stars({ count = 15 }: { count?: number }) {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
@@ -37,18 +37,18 @@ export default function Contact() {
       <Stars count={20} />
 
       <div className="max-w-4xl mx-auto px-4 md:px-6 text-center relative z-10">
-        {/* Minimal header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-12"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-gray-500">Contact</span>
-          <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
+          <span className="text-xs uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">Contact</span>
+          <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight text-gray-900 dark:text-white">
             Let's
             <br />
-            <span className="text-gray-500">connect</span>
+            <span className="text-gray-500 dark:text-gray-400">connect</span>
           </h2>
         </motion.div>
 
@@ -96,7 +96,7 @@ export default function Contact() {
               key={i}
               href={item.href}
               target="_blank"
-              className="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
               aria-label={item.label}
             >
               <item.icon className="w-5 h-5" />

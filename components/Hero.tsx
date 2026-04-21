@@ -7,7 +7,7 @@ import { useTyping } from "@/hooks/useAnimation";
 import { useRef } from "react";
 
 export default function Hero() {
-  const { displayedText } = useTyping("Building robust systems with Python & Java", 80);
+  const { displayedText } = useTyping("building scalable systems and automating complex business workflows", 80);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-sm md:text-base uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400 mb-6"
           >
-            Fullstack Engineer
+            Backend Engineer
           </motion.p>
 
           <motion.h1
@@ -47,9 +47,9 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex items-center justify-center gap-2 mb-10"
+            className="flex items-center justify-center gap-3 mb-10"
           >
-            <span className="h-[1px] w-8 bg-gray-300 dark:bg-gray-700" />
+            <span className="h-[1px] w-12 bg-gray-300 dark:bg-gray-700" />
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-400">
               {displayedText}
               <motion.span
@@ -58,7 +58,7 @@ export default function Hero() {
                 className="inline-block w-[2px] h-4 ml-1 bg-gray-400 align-middle"
               />
             </p>
-            <span className="h-[1px] w-8 bg-gray-300 dark:bg-gray-700" />
+            <span className="h-[1px] w-12 bg-gray-300 dark:bg-gray-700" />
           </motion.div>
 
           {/* Minimal icon links */}
@@ -66,7 +66,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex justify-center gap-6"
+            className="flex justify-center gap-4"
           >
             {[
               { href: "https://github.com/faishalzk", icon: Github },

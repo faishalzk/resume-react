@@ -8,9 +8,9 @@ export default function Projects() {
   const projects = useProjects();
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-white dark:bg-black text-gray-900 dark:text-white">
+    <section id="projects" className="py-24 md:py-32 bg-gray-50 dark:bg-zinc-900 text-gray-900 dark:text-white">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        {/* Minimal header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
             Featured
             <br />
-            <span className="text-gray-500">work</span>
+            <span className="text-gray-500 dark:text-gray-400">work</span>
           </h2>
         </motion.div>
 

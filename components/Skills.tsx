@@ -4,81 +4,45 @@ import { motion } from "framer-motion";
 import {
   Code2,
   Cloud,
-  Layout,
   Server,
   Terminal,
   Cpu,
 } from "lucide-react";
 
-// Minimal skill categories
+// Skill categories
 const skillCategories = [
   {
     title: "Languages",
     icon: <Code2 size={20} className="text-gray-900 dark:text-white" />,
-    skills: ["Python", "Java", "Golang", "TypeScript", "SQL", "Groovy"]
+    skills: ["Python", "Golang", "JavaScript", "TypeScript"]
   },
   {
     title: "Backend",
     icon: <Server size={20} className="text-gray-900 dark:text-white" />,
-    skills: ["FastAPI", "Django", "Node.js", "Grails", "SpiffWorkflow"]
+    skills: ["FastAPI", "Django", "Node.js", "SpiffWorkflow", "Dramatiq"]
   },
   {
-    title: "Frontend",
-    icon: <Layout size={20} className="text-gray-900 dark:text-white" />,
-    skills: ["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3"]
-  },
-  {
-    title: "Cloud",
+    title: "Cloud & Data",
     icon: <Cloud size={20} className="text-gray-900 dark:text-white" />,
-    skills: ["AWS Lambda", "Step Functions", "Docker", "CI/CD"]
+    skills: ["AWS Lambda", "Step Functions", "ETL", "PostgreSQL", "MySQL"]
   },
   {
-    title: "Data & AI",
-    icon: <Cpu size={20} className="text-gray-900 dark:text-white" />,
-    skills: ["Gen AI", "XGBoost", "ElasticSearch", "TensorFlow"]
-  },
-  {
-    title: "Tools",
+    title: "Search & APIs",
     icon: <Terminal size={20} className="text-gray-900 dark:text-white" />,
-    skills: ["Git", "Linux", "Postman", "Jira"]
+    skills: ["ElasticSearch", "GraphQL", "Git"]
+  },
+  {
+    title: "Workflow & AI",
+    icon: <Cpu size={20} className="text-gray-900 dark:text-white" />,
+    skills: ["BPMN", "XGBoost", "Credit Scoring"]
   }
 ];
 
-// Star component for astronomy feel
-function TwinklingStars({ count = 20 }: { count?: number }) {
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-      {Array.from({ length: count }).map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-gray-900 dark:bg-white"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            width: Math.random() * 2 + 1,
-            height: Math.random() * 2 + 1,
-          }}
-          animate={{
-            opacity: [0.2, 0.8, 0.2],
-          }}
-          transition={{
-            duration: Math.random() * 3 + 2,
-            repeat: Infinity,
-            delay: Math.random() * 2,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 md:py-32 bg-gray-50 dark:bg-zinc-900 text-gray-900 dark:text-white overflow-hidden">
-      <TwinklingStars count={15} />
-
-      <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
-        {/* Minimal header */}
+    <section id="skills" className="py-24 md:py-32 bg-white dark:bg-black text-gray-900 dark:text-white">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +53,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
             Tools I
             <br />
-            <span className="text-gray-500">use daily</span>
+            <span className="text-gray-500 dark:text-gray-400">use daily</span>
           </h2>
         </motion.div>
 

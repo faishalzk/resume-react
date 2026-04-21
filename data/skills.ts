@@ -3,29 +3,31 @@ import { Skill } from '@/types';
 export const skills: Skill[] = [
   // Languages
   { name: "Python", category: 'language' },
-  { name: "Java", category: 'language' },
+  { name: "Golang", category: 'language' },
   { name: "JavaScript", category: 'language' },
   { name: "TypeScript", category: 'language' },
-  { name: "Go", category: 'language' },
 
   // Frameworks
   { name: "Django", category: 'framework' },
   { name: "FastAPI", category: 'framework' },
-  { name: "React", category: 'framework' },
-  { name: "Next.js", category: 'framework' },
-  { name: "Grails", category: 'framework' },
+  { name: "Node.js", category: 'framework' },
+  { name: "SpiffWorkflow", category: 'framework' },
+  { name: "Dramatiq", category: 'framework' },
 
   // Tools
-  { name: "AWS", category: 'tool' },
-  { name: "Docker", category: 'tool' },
+  { name: "AWS Lambda", category: 'tool' },
+  { name: "Step Functions", category: 'tool' },
+  { name: "ETL", category: 'tool' },
   { name: "PostgreSQL", category: 'tool' },
+  { name: "MySQL", category: 'tool' },
   { name: "ElasticSearch", category: 'tool' },
+  { name: "GraphQL", category: 'tool' },
   { name: "Git", category: 'tool' },
 
   // AI/ML
-  { name: "TensorFlow", category: 'other' },
   { name: "XGBoost", category: 'other' },
-  { name: "Generative AI", category: 'other' },
+  { name: "Credit Scoring", category: 'other' },
+  { name: "BPMN", category: 'other' },
 ];
 
 // Provider function for dependency injection

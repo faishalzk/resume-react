@@ -1,81 +1,76 @@
-# **Faishal Zaka Naufal**
+# Faishal Zaka Naufal
 
-Computer Science Master's Graduate | Fullstack Engineer 
-
-**Contact Details:**
-
-* **Email:** [faishalzakanaufal@gmail.com](mailto:faishalzakanaufal@gmail.com) 
-* **Location:** Jakarta, Indonesia 
-* **Links:** [LinkedIn](https://www.google.com/search?q=https://linkedin.com/in/faishalzk) | [GitHub](https://github.com/faishalzk) 
-* **Phone:** +62 81221585403 
+🌐 faishalzaka.id  
+📧 faishalzakanaufal@gmail.com  
+🔗 linkedin.com/in/faishalzk  
+📱 +62 81221585403  
 
 ---
 
-## **Professional Summary**
+## Summary
 
-Computer Science Master's graduate with over 6 years of software development experience, specializing in Python and Java. Proven track record in the fintech industry, focusing on credit scoring models, business process automation, and generative AI. Experienced in building machine learning models for image processing and NLP applications.
-
----
-
-## **Technical Highlights**
-
-* **Backend Expertise:** Python (FastAPI, Django), Golang, and Groovy (Grails).
-* **Fintech & Automation:** 3+ years in fintech; expert in SpiffWorkflow and BPMN for credit decisioning.
-* **Cloud & Data:** Hands-on with AWS Lambda, Step Functions, and serverless ETL pipelines.
-* **AI/ML Research:** Published research in Generative Adversarial Networks (AttentionGAN) and XGBoost modeling.
+Backend Engineer with 6+ years of experience building scalable systems and automating complex business workflows in fintech environments. Specialized in designing workflow-driven systems (BPMN, SpiffWorkflow) and backend services using Python (FastAPI, Django), enabling business process automation and improving operational efficiency. Experienced in credit scoring, ETL pipelines, and serverless architectures (AWS Lambda, Step Functions), with a strong track record of translating business requirements into reliable, production-grade systems.
 
 ---
 
-## **Work Experience**
+## Key Achievements
 
-### **Fullstack Engineer** | PT. Impact Credit Solutions (Nikel)
-
-Jakarta | August 2024 – Present 
-
-* Designed and implemented business flows using **SpiffWorkflow** to improve automation efficiency.
-* Developed robust API solutions using **Python Django** and **FastAPI**.
-* Created a low-code business automation engine using Python and **Dramatiq** inspired by BPMN.
-
-### **Fullstack Engineer (Innovation - Strategy)** | PT. Sejahtera Lunaria Annua (KoinWorks)
-
-Jakarta | December 2021 – August 2024 
-
-* Developed end-to-end web products using **Python, Node.js, and Golang** to drive internal disruption.
-* Built a crawler engine to predict user revenue and repayment capability using **XGBoost**.
-* Streamlined loan processing through ETL automation using **AWS Lambda** and **Step Functions**.
-
-### **Back End Developer** | PT. Fairtech Digital Indonesia
-
-Jakarta | November 2018 – December 2021 
-
-* Utilized **Grails Framework** for web applications and **ElasticSearch** to enhance search capabilities.
-* Contributed to major web projects including **Canon Asia**, **Michelin Guide**, and **Hong Kong Tourism Board**.
+- Designed and implemented BPMN-based workflow automation for borrower and loan onboarding (LOS), reducing manual intervention and improving processing efficiency  
+- Reduced onboarding processing time by ~60–70% through automation of credit decision workflows  
+- Built credit scoring models using alternative data, improving loan qualification and collection effectiveness  
+- Developed low-code automation tools enabling faster iteration of business processes  
 
 ---
 
-## **Education**
+## Work Experience
 
-* **Master of Computer Science (Generative AI)** | University of Indonesia 
-* *GPA: 3.52* | 2020 – 2023 
+### PT. Impact Credit Solutions (Nikel), Jakarta  
+**Backend Engineer**  
+*August 2024 – Present*
 
-* **Bachelor of Science (Astronomy)** | Institut Teknologi Bandung 
-* *GPA: 3.03* | 2013 – 2017 
-
----
-
-## **Research & Projects**
-
-* **Astronomical Image Denoising (AttentionGAN):** Designed a novelty ML model using CycleGAN with attention layers.
-* **COVID-19 Data Modeling:** Experimented with Random Forest and XGBoost to analyze community mobility and weather variability.
-* **Social Media Automation:** Developed sentiment analysis tools and social media automation using Python and ADB.
+- Designed and implemented workflow-driven business processes using SpiffWorkflow (BPMN), reducing borrower and loan onboarding processing time by ~60–70% and improving consistency and scalability of credit decision workflows  
+- Built and integrated backend services (Python, Django, FastAPI) to support workflow execution and business rule orchestration  
+- Developed a low-code automation engine using Python and Dramatiq, enabling non-engineering teams to configure and iterate business workflows faster  
+- Collaborated with business stakeholders to translate requirements into scalable workflow systems  
+- Supported production fintech systems handling high-volume borrower and loan onboarding workflows  
 
 ---
 
-## **Core Skills**
+### PT. Sejahtera Lunaria Annua (KoinWorks), Jakarta  
+**Backend Engineer | Innovation - Strategy**  
+*December 2021 – August 2024*
 
-* **Languages:** Python, Java, Golang, Node.js, Groovy, TypeScript, SQL.
-* **Frameworks:** FastAPI, Django, SpiffWorkflow, ReactJS, Grails.
-* **Tools:** AWS, ElasticSearch, GitHub CI/CD, Adobe Experience Manager.
-* **Spoken:** English (Fluent), Bahasa Indonesia (Fluent).
+- Built end-to-end internal products to enable new fintech business opportunities and improve lending operations  
+- Developed credit scoring models (XGBoost) using alternative data (ecommerce), improving loan qualification and collection effectiveness  
+- Designed data pipelines using AWS Lambda and Step Functions to process rejected loan users and generate alternative loan offerings  
+- Built web crawlers to extract user ecommerce data and generate financial insights for credit assessment  
+- Developed and maintained backend services (Python, Node.js, Golang) supporting high-impact business features  
 
 ---
+
+## Skills
+
+**Languages:** Python, Golang, JavaScript/TypeScript  
+**Backend:** FastAPI, Django, Node.js  
+**Workflow & Automation:** SpiffWorkflow, BPMN, Dramatiq  
+**Cloud & Data:** AWS Lambda, Step Functions, ETL pipelines  
+**Databases:** PostgreSQL, MySQL  
+**Other:** GraphQL, ElasticSearch  
+
+---
+
+## Education
+
+**Master of Computer Science**  
+University of Indonesia, Depok  
+*July 2020 – July 2023*
+
+**Bachelor of Science, Astronomy**  
+Institut Teknologi Bandung, Bandung  
+*July 2013 – July 2017*
+
+---
+
+## Research
+
+- Published work on AttentionGAN for image denoising and XGBoost-based data modeling (IC3INA 2021)

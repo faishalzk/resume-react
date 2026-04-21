@@ -2,24 +2,24 @@ import { ExperienceItem } from '@/types';
 
 export const experiences: ExperienceItem[] = [
   {
-    role: "Fullstack Engineer",
+    role: "Backend Engineer",
     company: "PT. Impact Credit Solutions (Nikel)",
     date: "August 2024 – Present",
     desc: [
-      "Designed and implemented business flows using SpiffWorkflow to improve automation efficiency.",
-      "Developed robust API solutions using Python Django and FastAPI.",
-      "Created a low-code business automation engine using Python and Dramatiq inspired by BPMN."
+      "Designed and implemented workflow-driven business processes using SpiffWorkflow (BPMN), reducing borrower and loan onboarding processing time by ~60–70%.",
+      "Built and integrated backend services (Python, Django, FastAPI) to support workflow execution and business rule orchestration.",
+      "Developed a low-code automation engine using Python and Dramatiq, enabling non-engineering teams to configure business workflows faster."
     ],
     color: "bg-blue-500"
   },
   {
-    role: "Fullstack Engineer (Innovation - Strategy)",
+    role: "Backend Engineer | Innovation - Strategy",
     company: "PT. Sejahtera Lunaria Annua (KoinWorks)",
     date: "December 2021 – August 2024",
     desc: [
-      "Developed end-to-end web products using Python, Node.js, and Golang to drive internal disruption.",
-      "Built a crawler engine to predict user revenue and repayment capability using XGBoost.",
-      "Streamlined loan processing through ETL automation using AWS Lambda and Step Functions."
+      "Built end-to-end internal products to enable new fintech business opportunities and improve lending operations.",
+      "Developed credit scoring models (XGBoost) using alternative data (ecommerce), improving loan qualification and collection effectiveness.",
+      "Designed data pipelines using AWS Lambda and Step Functions to process rejected loan users and generate alternative loan offerings."
     ],
     color: "bg-purple-500"
   },

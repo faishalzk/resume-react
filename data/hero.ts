@@ -2,13 +2,13 @@ import { SocialLink } from '@/types';
 
 // Hero section data
 export const heroData = {
-  title: "Fullstack Engineer",
+  title: "Backend Engineer",
   name: "Faishal Zaka Naufal",
   typingTexts: [
-    "Building robust systems with Python & Java",
-    "Innovating with Generative AI",
+    "Building scalable systems with Python & Go",
+    "Automating complex business workflows",
     "Crafting fintech solutions",
-    "Fullstack Engineer based in Jakarta",
+    "Backend Engineer based in Jakarta",
   ],
 };
 

@@ -9,18 +9,18 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 md:py-32 bg-gray-50 dark:bg-zinc-900 text-gray-900 dark:text-white">
       <div className="max-w-4xl mx-auto px-4 md:px-6">
-        {/* Minimal header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-16 md:mb-24"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-gray-500">Experience</span>
+          <span className="text-xs uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">Experience</span>
           <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
             Where I've
             <br />
-            <span className="text-gray-500">worked</span>
+            <span className="text-gray-500 dark:text-gray-400">worked</span>
           </h2>
         </motion.div>
 
