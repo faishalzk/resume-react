@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "@/content/blog";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import Navbar from "@/components/Navbar";
+import CodeBlock from "@/components/blog/CodeBlock";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -86,10 +89,11 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'append' }]]}
             components={{
-              h1: ({ children }) => <h1 className="text-3xl font-bold mt-12 mb-6">{children}</h1>,
-              h2: ({ children }) => <h2 className="text-2xl font-bold mt-10 mb-4">{children}</h2>,
-              h3: ({ children }) => <h3 className="text-xl font-bold mt-8 mb-3">{children}</h3>,
+              h1: ({ children, id }) => <h1 id={id} className="text-3xl font-bold mt-12 mb-6">{children}</h1>,
+              h2: ({ children, id }) => <h2 id={id} className="text-2xl font-bold mt-10 mb-4 scroll-mt-24">{children}</h2>,
+              h3: ({ children, id }) => <h3 id={id} className="text-xl font-bold mt-8 mb-3">{children}</h3>,
               p: ({ children }) => <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">{children}</p>,
               li: ({ children }) => <li className="ml-4 mb-2 text-gray-700 dark:text-gray-300">{children}</li>,
               a: ({ href, children }) => (
@@ -104,7 +108,23 @@ export default async function BlogPostPage({ params }: PageProps) {
               ),
               strong: ({ children }) => <strong className="font-bold">{children}</strong>,
               em: ({ children }) => <em className="italic">{children}</em>,
-              code: ({ children }) => <code className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded text-sm font-mono">{children}</code>,
+              code: ({ children, className }) => {
+                // Inline code (not in a pre block) gets styled differently
+                if (!className) {
+                  return <code className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded text-sm font-mono text-gray-800 dark:text-gray-200">{children}</code>;
+                }
+                return <code className={className}>{children}</code>;
+              },
+              pre: ({ children }) => {
+                // Extract the code element's props
+                const codeElement = children as React.ReactElement;
+                const { className, children: codeContent } = codeElement.props;
+                return (
+                  <CodeBlock className={className}>
+                    {String(codeContent)}
+                  </CodeBlock>
+                );
+              },
               hr: () => <hr className="my-8 border-gray-200 dark:border-gray-800" />,
               table: ({ children }) => <table className="w-full my-6 border-collapse">{children}</table>,
               thead: ({ children }) => <thead className="bg-gray-100 dark:bg-gray-800">{children}</thead>,
